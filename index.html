@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // var x= +prompt("Enter a number ", "")
+
+        // if(x== +prompt("Enter a number 2", "")){
+        //     alert("X is 2 ")
+        //     location.href='./welcome.html'
+        // }
+        // else if (x !=2){
+        //     alert ("jaldi wahan se hato")
+        //     location.href='./index.html'
+        // }
+    var math= +prompt("Enter Math numbers : ","")
+    var English= +prompt("Enter English numbers : ","")
+    var urdu= +prompt("Enter urdu numbers : ","")
+    var phy= +prompt("Enter physic numbers : ","")
+    var computer= +prompt("Enter comuter numbers : ","")
+    var Amath= +prompt("Enter Advance Math numbers : ","")
+    var total = math+ English+ urdu+ phy+computer+ Amath
+    var per = ((total/600)*100).toFixed(2)
+    var grade;
+    if(per>85){
+        grade="A"
+    }
+    else if(per>70){
+        grade="B"
+    }
+    else if(per>60){
+        grade="c"
+    }
+    else  if(per>50){
+        grade="D"
+    } 
+   else {
+        grade="F"
+    }
+document.write(
+    
+    `<table border= '2px'>
+        <tr>
+            <th>Math</th>
+            <th>English</th>
+            <th>phy</th>
+            <th>Computer</th>
+            <th>Advance Math</th>
+            <th>Urdu</th>
+            <th>Total</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>${math}</td>
+            <td>${English}</td>
+            <td>${phy}</td>
+            <td>${computer}</td>
+            <td>${Amath}</td>
+            <td>${urdu}</td>
+            <td>${total}</td>
+            <td>${per}</td>
+            <td>${grade}</td>
+
+        </tr>
+        </table>`
+)
+    </script>
+</body>
+</html>
